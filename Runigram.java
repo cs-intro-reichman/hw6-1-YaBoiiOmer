@@ -9,9 +9,13 @@ public class Runigram {
 		// Tests the reading and printing of an image:
 
 
-		Color[][] cake = read("cake.ppm");
+		// Color[][] cake = read("cake.ppm");
+		// morph(cake, ironman, 30);
+
+
 		Color[][] ironman = read("ironman.ppm");
-		morph(cake, ironman, 30);
+		setCanvas(ironman);
+		display(ironman);
 
 
 
