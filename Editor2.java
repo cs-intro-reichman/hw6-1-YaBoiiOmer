@@ -11,6 +11,22 @@ public class Editor2 {
 
 	public static void main (String[] args){
 		//// Replace this comment with your code.
-		//// This function is similar to the main function of Editor1.java			
+		//// This function is similar to the main function of Editor1.java
+		// ironman.ppm 800 500
+
+		String filename = args[0];
+		int width = Integer.parseInt(args[1]);
+		int height = Integer.parseInt(args[1]);
+
+		Color[][] image = Runigram.read(filename);
+		Color[][] scaled = Runigram.scaled(image, width, height);
+
+		Runigram.setCanvas(image);
+		Runigram.display(image);
+		StdDraw.pause(3000); 
+		Runigram.setCanvas(scaled);
+		Runigram.display(scaled);		
+
+
 	}
 }
